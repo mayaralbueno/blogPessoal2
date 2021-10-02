@@ -1,48 +1,91 @@
+
 <div class="container-fluid">
 
    <div class="row indice-color d-flex align-items-center">
-      <div class="col-md-6">
+       <div class="col-md-6">
 
-         <div class="row d-flex justify-content-center">
-            <div class="col-md-6 text-white">
-               <h1 class="fs-54">Seja bem vindo(a)!</h1>
-               <h5>Expresse aqui os seus pensamentos e opiniões</h5>
-            </div>
-         </div>
-         <br>
-         <div class="row  d-flex justify-content-center mt-3 mb-5">
-            <div class="col-md-6">
-               <button class="btn btn-light mr-2">Nova Postagem</button>
+           <div class="row d-flex justify-content-center">
+               <div class="col-md-6 text-white">
+                   <h1 class="fs-54">Seja bem vindo(a)!</h1>
+                   <h5 class="fs-18">Expresse aqui seus pensamentos e opiniões.</h5>
+               </div>
+           </div>
 
-               <a class="btn btn-outline-light" href="">Ver Postagens</a>
-            </div>
-         </div>
+           <div class="row d-flex justify-content-center mt-3 mb-5">
+               <div class="col-md-6">
+                   <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                   <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+               </div>
+           </div>
 
-      </div>
+       </div>
 
-      <div class="col-md-6  d-flex justify-content-center">
-         <img src="https://theme.zdassets.com/theme_assets/2438567/b23feca7c0698f651ef0288472af63dd5e8d1b33.png" alt="500px " height="500px">
-      </div>
+       <div class="col-md-6 d-flex justify-content-center">
+           <img src="https://theme.zdassets.com/theme_assets/2438567/b23feca7c0698f651ef0288472af63dd5e8d1b33.png" alt="" width="500px" height="500px">
+       </div>
    </div>
 
-
 </div>
-<div class="container mb-5 mt-5">
 
-   <ul class="nav nav-pills mb-3 d-flx justify-content-center" id="pills-tab" role="tablist">
-      <li class="nav-item " role="presentation">
-        <button class="nav-link active text-secondary" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Todas as Postagens</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Minhas Postagens</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Postagens por tema</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-    </div>
+<div class="container mb-5 mt-5" id="postagens">
+   <nav>
+       <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+         <a class="nav-item nav-link active text-secondary font-weight-bold" id="todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true">Todas as Postagens</a>
+
+         <a class="nav-item nav-link  text-secondary font-weight-bold" id="minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="minhasPostagens" aria-selected="false">Minhas Postagens</a>
+
+         <a class="nav-item nav-link  text-secondary font-weight-bold" id="postagensPorTema-tab" data-toggle="tab" href="#postagensPorTema" role="tab" aria-controls="postagensPorTema" aria-selected="false">Postagens por Tema</a>
+
+       </div>
+
+     </nav>
+     <div class="tab-content" id="nav-tabContent">
+       <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">Todas as Postagens</div>
+       <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">Minhas Postagens</div>
+       <div class="tab-pane fade" id="postagensPorTema" role="tabpanel" aria-labelledby="postagensPorTema-tab">Postagens por Tema</div>
+     </div>
 </div>
+
+
+
+<!-- MODAL -->
+ <!-- Modal -->
+ <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+           <label for="texto">Texto</label>
+           <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+       </div>
+
+       <div class="form-group">
+           <label for="texto">Escolha um tema ou <a routerLink='/tema'data-dismiss="modal">cadastre um novo</a>: </label>
+           <select class="form-control" name="tema" id="tema">
+               <option value="">Temas</option>
+           </select>
+           
+       </div>
+
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+         <button type="button" class="btn btn-success">Publicar</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- /MODAL -->
