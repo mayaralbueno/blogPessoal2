@@ -1,8 +1,12 @@
 #img-bg{
-  background-image: url(https://www.ubackground.com/_ph/4/704297431.jpg);
+  background-image: url(https://i.pinimg.com/564x/2f/b1/d0/2fb1d02bf55a5a0c00d40fa96de58c6b.jpg);
 
   min-height: 695px;
   background-position:center ;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.color-cadastrar{
+  background-color: #efb2fa;
+  
 }
