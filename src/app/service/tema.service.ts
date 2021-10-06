@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import {tema} from '../model/tema';
 
@@ -18,8 +18,17 @@ export class TemaService {
    getAllTema(): Observable<tema[]>{
      return this.http.get<tema[]>('http://localhost:8080/tema', this.token)
    }
+   getByidTema(id: number): Observable<tema>{
+    return this.http.get<tema>(`http://localhost:8080/tema/${id}`,this.token)
+   }
    postTema(tema: tema):Observable<tema>{
      return this.http.post<tema>('http://localhost:8080/tema/salvar',tema,this.token)
 
+   }
+   putTema(tema: tema):Observable<tema>{
+     return this.http.put<tema>('http://localhost:8080/tema/salvar  ',tema,this.token)
+   }
+   deleteTema(id: number){
+    return this.http.delete(`http://localhost:8080/tema/id/${id}`,this.token)
    }
 }
