@@ -16,19 +16,19 @@ export class TemaService {
    headers: new HttpHeaders().set('Authorization',environment.token)
  }
    getAllTema(): Observable<tema[]>{
-     return this.http.get<tema[]>('http://localhost:8080/tema', this.token)
+     return this.http.get<tema[]>('http://localhost:8080/tema')
    }
    getByidTema(id: number): Observable<tema>{
-    return this.http.get<tema>(`http://localhost:8080/tema/${id}`,this.token)
+    return this.http.get<tema>(`http://localhost:8080/tema/${id}`)
    }
    postTema(tema: tema):Observable<tema>{
-     return this.http.post<tema>('http://localhost:8080/tema/salvar',tema,this.token)
+     return this.http.post<tema>('http://localhost:8080/tema/salvar',tema)
 
    }
    putTema(tema: tema):Observable<tema>{
-     return this.http.put<tema>('http://localhost:8080/tema/salvar  ',tema,this.token)
+     return this.http.put<tema>('http://localhost:8080/tema/salvar  ',tema)
    }
    deleteTema(id: number){
-    return this.http.delete(`http://localhost:8080/tema/id/${id}`,this.token)
+    return this.http.delete(`http://localhost:8080/tema/id/${id}`)
    }
 }
