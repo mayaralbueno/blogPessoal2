@@ -20,6 +20,6 @@ export class PostagemService {
     return this.http.get<postagem[]>('http://localhost:8080/postagens')
   }
   postPostagem(postagem: postagem):Observable<postagem>{
-    return this.http.post<postagem>('http://localhost:8080/postagens/salvar',postagem)
+    return this.http.post<postagem>('http://localhost:8080/postagens/salvar',postagem )
   }
 }
