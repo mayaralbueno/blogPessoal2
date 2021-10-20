@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  nome = environment.nome
+  nome = environment.usuario
   foto = environment.foto
 
 
@@ -24,7 +24,7 @@ export class MenuComponent implements OnInit {
   sair(){
     this.router.navigate(['/entrar'])
     environment.token = ''
-    environment.nome = ''
+    environment.usuario = ''
     environment.foto = ''
     environment.id = 0
   }

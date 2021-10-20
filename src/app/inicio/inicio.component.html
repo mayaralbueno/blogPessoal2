@@ -1,91 +1,152 @@
-
 <div class="container-fluid">
 
-   <div class="row indice-color d-flex align-items-center">
-       <div class="col-md-6">
+  <div class="row indice-color d-flex align-items-center">
+    <div class="col-md-6">
 
-           <div class="row d-flex justify-content-center">
-               <div class="col-md-6 text-white">
-                   <h1 class="fs-54">Seja bem vindo(a)!</h1>
-                   <h5 class="fs-18">Expresse aqui seus pensamentos e opiniões.</h5>
-               </div>
-           </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 text-white">
+          <h1 class="fs-54">WELCOME!!</h1>
+          <h5 class="fs-18">Expresse aqui seus pensamentos e opiniões.</h5>
+        </div>
+      </div>
 
-           <div class="row d-flex justify-content-center mt-3 mb-5">
-               <div class="col-md-6">
-                   <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                   <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
-               </div>
-           </div>
+      <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-md-6">
+          <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+          <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+        </div>
+      </div>
 
-       </div>
+    </div>
 
-       <div class="col-md-6 d-flex justify-content-center">
-           <img src="https://theme.zdassets.com/theme_assets/2438567/b23feca7c0698f651ef0288472af63dd5e8d1b33.png" alt="" width="500px" height="500px">
-       </div>
-   </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <img
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec4d35a6-d667-4476-bbb3-27502dbcc7da/da313bs-2239dc32-d4b1-4a4a-a905-c9009207f271.png/v1/fill/w_495,h_350,strp/stardust__vocaloid__by_aryesmye_da313bs-350t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQxNCIsInBhdGgiOiJcL2ZcL2VjNGQzNWE2LWQ2NjctNDQ3Ni1iYmIzLTI3NTAyZGJjYzdkYVwvZGEzMTNicy0yMjM5ZGMzMi1kNGIxLTRhNGEtYTkwNS1jOTAwOTIwN2YyNzEucG5nIiwid2lkdGgiOiI8PTIwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DEURlLRgYUoWIh-VM9woQ0NmjWVl5509OSBbKjJnJgA"
+        alt="" width="400px" height="400px">
+    </div>
+  </div>
 
 </div>
 
 <div class="container mb-5 mt-5" id="postagens">
-   <nav>
-       <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-         <a class="nav-item nav-link active text-secondary font-weight-bold" id="todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true">Todas as Postagens</a>
+      <a class="nav-item nav-link active text-secondary font-weight-bold" id="todasPostagens-tab" data-toggle="tab"
+        href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true"> Todas as postagens
 
-         <a class="nav-item nav-link  text-secondary font-weight-bold" id="minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="minhasPostagens" aria-selected="false">Minhas Postagens</a>
 
-         <a class="nav-item nav-link  text-secondary font-weight-bold" id="postagensPorTema-tab" data-toggle="tab" href="#postagensPorTema" role="tab" aria-controls="postagensPorTema" aria-selected="false">Postagens por Tema</a>
+      </a>
 
-       </div>
+      <a (click)='findByusuario()' class="nav-item nav-link  text-secondary font-weight-bold" id="minhasPostagens-tab"
+        data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="minhasPostagens"
+        aria-selected="false">Minhas Postagens</a>
 
-     </nav>
-     <div class="tab-content" id="nav-tabContent">
-       <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">Todas as Postagens</div>
-       <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">Minhas Postagens</div>
-       <div class="tab-pane fade" id="postagensPorTema" role="tabpanel" aria-labelledby="postagensPorTema-tab">Postagens por Tema</div>
-     </div>
+      <a class="nav-item nav-link  text-secondary font-weight-bold" id="postagensPorTema-tab" data-toggle="tab"
+        href="#postagensPorTema" role="tab" aria-controls="postagensPorTema" aria-selected="false">Postagens por
+        Tema</a>
+
+    </div>
+
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of listaPostagens'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <small class="text-muted mt-3">Tema:{{item.tema.descricao}}</small>
+            <p class="card-text">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">{{item.data|date: 'dd/MM/yyyy'}}  {{item.data | date:
+                'HH:mm'}}</small></p>
+
+            <p class="card-text"><small class="text-muted">by :{{item.criador.nome}}
+
+              </small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
+
+      <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
+        <div class="card-columns">
+          <div class="card text-center" *ngFor='let item of usuario.minhasPostagens'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <small class="text-muted mt-3">Tema:{{item.tema.descricao}}</small>
+              <p class="card-text">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.data|date: 'dd/MM/yyyy'}}  {{item.data | date:
+                  'HH:mm'}}</small></p>
+
+              <p class="card-text"><small class="text-muted">by :{{item.criador.nome}}
+
+                </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="postagensPorTema" role="tabpanel" aria-labelledby="postagensPorTema-tab">Postagens
+      por Tema
+
+      <div class="card-columns" *ngFor='let of listaTemas'>
+        <div class="card text-center" *ngFor='let item of tema.postagem'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <p class="card-text">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">{{item.data|date: 'dd/MM/yyyy'}} {{item.data | date:
+                'HH:mm'}}</small></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 
 
 <!-- MODAL -->
- <!-- Modal -->
- <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
         <div class="form-group">
-            <label for="titulo">Título</label>
-            <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='Postagem.titulo' type="text" class="form-control" id="titulo"
+            placeholder="Digite o título">
         </div>
 
         <div class="form-group">
-           <label for="texto">Texto</label>
-           <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
-       </div>
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='Postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
 
-       <div class="form-group">
-           <label for="texto">Escolha um tema ou <a routerLink='/tema'data-dismiss="modal">cadastre um novo</a>: </label>
-           <select class="form-control" name="tema" id="tema">
-               <option value="">Temas</option>
-           </select>
-           
-       </div>
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a routerLink='/tema' data-dismiss="modal">cadastre um novo</a>:
+          </label>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByidTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+          </select>
 
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-         <button type="button" class="btn btn-success">Publicar</button>
-       </div>
-     </div>
-   </div>
- </div>
- <!-- /MODAL -->
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /MODAL -->
