@@ -54,8 +54,8 @@ export class InicioComponent implements OnInit {
      this.listaPostagens = resp
     } )
   }
-  findByUsuario(){
-    this.authService.getByIdUsuario(this.idcriador).subscribe((resp: usuario)=> {
+  findByusuario(){
+    this.authService.getByIdCriador(this.idcriador).subscribe((resp: usuario)=> {
       this.usuario
     })
 
