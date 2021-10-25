@@ -64,10 +64,16 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
      
   </tr>
 </table>
+ <br>
 
 
 
-   
+  
+  
+   <p align="center">
+  
   <img align='right flex-center' src="https://media.giphy.com/media/i1JHRZSXO9LZZDHqii/giphy.gif" width="350">
+</p>
+   
 
 
