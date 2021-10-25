@@ -1,6 +1,8 @@
 # 👩‍💻 blogPessoal2 👨‍💻
 
-👨‍💻 Em construção 🚧
+
+<h2> 👨‍💻 Em construção 🚧</h2>
+
 
 🚧 Informações sobre a parte front-end do blogPessoal 🚩
 
@@ -8,9 +10,8 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
 
 <br>
 
-👨‍💻 Linguagens utilizadas :
 
-
+<h2> 👨‍💻 Linguagens utilizadas</h2>
 
 
 <table align="center" style=" width: 60%" >
