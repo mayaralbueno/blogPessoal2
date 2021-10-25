@@ -14,9 +14,9 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  Postagem: postagem = new postagem ()
+  Postagem: postagem = new postagem()
   listaPostagens: postagem[]
-  tema: tema  = new tema( )
+  tema: tema = new tema()
   listaTemas: tema[]
   idTema: number
   usuario: usuario = new usuario()
@@ -27,52 +27,55 @@ export class InicioComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     private authService: AuthService
-  ){ }
+  ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
+    if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
     this.getAlltemas()
     this.getAllPostagens()
   }
 
-  getAlltemas(){
-    this.temaService.getAllTema().subscribe((resp: tema[])=>{
+  getAlltemas() {
+    this.temaService.getAllTema().subscribe((resp: tema[]) => {
       this.listaTemas = resp
     })
   }
 
-  findByidTema(){
-    this.temaService.getByidTema(this.idTema).subscribe((resp: tema)=>{
+  findByidTema() {
+    this.temaService.getByidTema(this.idTema).subscribe((resp: tema) => {
       this.tema = resp
     })
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagem().subscribe((resp: postagem[])=>{
-     this.listaPostagens = resp
-    } )
+  getAllPostagens() {
+    this.postagemService.getAllPostagem().subscribe((resp: postagem[]) => {
+      this.listaPostagens = resp
+    })
   }
-  findByusuario(){
-    this.authService.getByIdCriador(this.idcriador).subscribe((resp: usuario)=> {
-      this.usuario
+  findByusuario() {
+    console.log(this.idcriador)
+    console.log("user" + JSON.stringify(this.usuario))
+    this.postagemService.getByIdCriador(this.idcriador).subscribe((resp: usuario) => {
+      this.usuario = resp
+      console.log("user" + JSON.stringify(this.usuario))
     })
 
   }
 
-  publicar(){
-  this.tema.id = this.idTema
-  this.Postagem.tema = this.tema
-  this.usuario.id = this.idcriador
-  this.Postagem.criador = this.usuario
+  publicar() {
+    this.tema.id = this.idTema
+    this.Postagem.tema = this.tema
+    this.usuario.id = this.idcriador
+    this.Postagem.criador = this.usuario
 
-  this.postagemService.postPostagem(this.Postagem).subscribe((resp: postagem)=>{
-    this.Postagem = resp
-    alert('Postagem realizada com Sucesso!')
-    this.Postagem = new postagem()
-    this.getAllPostagens()
-  })
+    this.postagemService.postPostagem(this.Postagem).subscribe((resp: postagem) => {
+      this.Postagem = resp
+      alert('Postagem realizada com Sucesso!')
+      this.Postagem = new postagem()
+      this.getAllPostagens()
+    })
   }
 
 }
