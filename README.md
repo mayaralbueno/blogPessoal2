@@ -1,7 +1,7 @@
 # 👩‍💻 blogPessoal2 👨‍💻
 
 
-<h2> 👨‍💻 Em construção 🚧</h2>
+<h2> 👨‍💻 Em Desenvolvimento 🚧</h2>
 
 
 🚧 Informações sobre a parte front-end do blogPessoal 🚩
