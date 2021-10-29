@@ -11,9 +11,8 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
 <br>
 
 
-<h2> 👨‍💻 Linguagens utilizadas</h2>
-
-
+<h2  align="center"> 👩🏽‍💻Tecnologias  :<h2>
+<br>
 <table align="center" style=" width: 60%" >
   <tr>
     <td align="center">
@@ -28,6 +27,7 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
    <img  src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white">
    <td align="center">
      <img  src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
+    
    <td align="center">
    <img  src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
      
@@ -45,6 +45,9 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
    <img  src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">
     <td align="center">
    <img  src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+     <td align="center">
+       <img  src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white">
+     
  </tr>
  <tr>
    <td align="center">
@@ -61,11 +64,20 @@ Abordamos desde a base, utilizando HTML5 para a marcação do conteúdo, CSS3 pa
    <img  src=" https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
      <img  src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
    <td align="center">
+     <img  src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
+   
      
      
   </tr>
 </table>
- <br>
+
+<br>
+
+
+  
+  
+     
+
 
 
 
